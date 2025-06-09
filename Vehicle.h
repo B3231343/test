@@ -16,11 +16,13 @@ public:
     Vehicle();
     Vehicle(string b, string m, int y, string t);
 
+    // Getter
     string getBrand() const;
     string getModel() const;
     int getYear() const;
     string getType() const;
 
+    // Setter
     void setBrand(const string& b);
     void setModel(const string& m);
     void setYear(int y);
@@ -28,10 +30,12 @@ public:
 
     void displayInfo() const;
 
+    // 由使用者輸入資料並建立新物件
     static Vehicle inputFromUser();
 
-    static void deleteSingleMatch(vector<Vehicle>& vehicles,const string& brand,const string& model,int year,
-    const string& type);
+    // 刪除單筆符合條件的資料
+    static void deleteSingleMatch(vector<Vehicle>& vehicles, const string& brand,
+        const string& model, int year, const string& type);
 };
 
 #endif
